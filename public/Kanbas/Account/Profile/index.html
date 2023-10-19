@@ -1,66 +1,110 @@
-<table border="1" width="100%">
-  <tr>
-    <td valign="top">
-      <ul>
-          <li><a href="/Kanbas/Account/Profile/index.html">Account</a></li>
-          <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-          <li><a href="/Kanbas/Courses/Home/home.html">Courses</a></li>
-          <li><a href="/Kanbas/Canlendar/screen.html">Canlendar</a></li>
-          <li><a href="/Kanbas/Inbox/screen.html">Inbox</a></li>
-          <li><a href="/Kanbas/History/screen.html">History</a></li>
-          <li><a href="/Kanbas/Studio/screen.html">Studio</a></li>
-          <li><a href="/Kanbas/Commons/screen.html">Commons</a></li>
-          <li><a href="/Kanbas/Help/screen.html">Help</a></li>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
+    <link rel="stylesheet" href="/lib/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-1">
+        <ul class="wd-kanbas-navigation">
+          <li>
+              <a href="/Kanbas/Courses/Home/home.html">
+                  <img src="/Kanbas/neu.png" alt="Logo" class="logo-img">
+              </a>
+          </li>
+          <li class="wd-account-active wd-active">
+              <a href="/Kanbas/Account/Profile/index.html">
+                  <i class="fas fa-user" aria-hidden="true"></i>
+              Account
+          </a></li>
+          <li>
+              <a href="/Kanbas/Dashboard/screen.html">
+                <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                Dashboard</a>
+            </li>
+          <li><a href="/Kanbas/Courses/Home/home.html">
+              <i class="fas fa-book" aria-hidden="true"></i>
+              Courses</a></li>
+          <li>
+              <a href="/Kanbas/Canlendar/screen.html">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                Calendar
+              </a>
+          </li>
+          <li><a href="/Kanbas/Inbox/screen.html">
+              <i class="fas fa-inbox" aria-hidden="true"></i>
+              Inbox</a></li>
+          <li><a href="/Kanbas/History/screen.html">
+              <i class="fas fa-history" aria-hidden="true"></i>
+              History</a></li>
+          <li><a href="/Kanbas/Studio/screen.html">
+              <i class="fas fa-laptop" aria-hidden="true"></i>
+              Studio</a></li>
+          <li><a href="/Kanbas/Commons/screen.html">
+              <i class="fas fa-people-arrows" aria-hidden="true"></i>
+              Commons</a></li>
+          <li><a href="/Kanbas/Help/screen.html">
+              <i class="fas fa-question-circle" aria-hidden="true"></i>
+              <span style="display: block;">Help</span>
+          </a></li>
       </ul>
-    </td>
-    <td valign="top">
-      <ul>
-          <li><a href="/Kanbas/Courses/Home/home.html">Home</a></li>
-          <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
-          <li><a href="/Kanbas/Courses/Assignments/index.html">Assignments</a></li>
-          <li><a href="/Kanbas/Courses/Grades/grades.html">Grades</a></li>
-          <li><a href="/Kanbas/Courses/Piazza/screen.html">Piazza</a></li>
-          <li><a href="/Kanbas/Courses/ZoomMeetings/screen.html">Zoom Meetings</a></li>
-          <li><a href="/Kanbas/Courses/Quizzes/screen.html">Quizzes</a></li>
-          <li><a href="/Kanbas/Courses/People/screen.html">People</a></li>
-          <li><a href="/Kanbas/Courses/PanoptoVideo/screen.html">Panopto Video</a></li>
-          <li><a href="/Kanbas/Courses/Discussions/screen.html">Discussions</a></li>
-          <li><a href="/Kanbas/Courses/Announcements/screen.html">Announcements</a></li>
-          <li><a href="/Kanbas/Courses/Pages/screen.html">Pages</a></li>
-          <li><a href="/Kanbas/Courses/Files/screen.html">Files</a></li>
-          <li><a href="/Kanbas/Courses/Rubrics/screen.html">Rubrics</a></li>
-          <li><a href="/Kanbas/Courses/Outcomes/screen.html">Outcomes</a></li>
-          <li><a href="/Kanbas/Courses/Collaborations/screen.html">Collaborations</a></li>
-          <li><a href="/Kanbas/Courses/Syllabus/screen.html">Syllabus</a></li>
-          <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
-      </ul>
-    </td>
-    <td valign="top">
-    Alice Wonderland's Profile
-    <hr>
+      </div>
 
-    <table width="100%">
-      <tr>
-        <td align="left"><strong>Alice Wonderland</strong></td>
-        <td align="right">
-          <form action="/Kanbas/Account/Profile/edit.html">
-            <button>Edit Profile!!!!</button>
+
+
+      <div class="col-11">
+        <div class="row">
+          <div class="col">
+            <h3><i class="fas fa-hamburger text-secondary"></i> Alice Wonderland's Profile</h3>
+          </div>
+          <hr />
+        </div>
+
+        <div class="row">
+          <div class="col-2">
+            <ul class="wd-course-navigation d-none d-md-block">
+              <li><a href="#">Notifications</a></li>
+              <li class="wd-active"><a href="/Kanbas/Account/Profile/index.html">Profile</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">ePortfolios</a></li>
+              <li><a href="#">Shared Content</a></li>
+              <li><a href="#">The Hub</a></li>
+              <li><a href="#">Qwickly Course Tools</a></li>
+              <li><a href="#">Global Announcements</a></li>
+            </ul>
+          </div>
+          <div class="col-7">
+            <i class="fas fa-user fa-5x" aria-hidden="true"></i>
+            <br><br>
+            <h2>Alice Wonderland</h2><br>
+            <h3>Contact</h3>
+            No service, you can add on the setting page.
+            <br>
+            <br>
+        
+            <h3>Biography</h3>
+            I followed the white rabbit down the hole.
+            <br>
+            <br>
+        
+            <h3>Links</h3>
+            <a href="#">Youtube</a>
+          </div>
+          <div class="col-2">
+            <form action="/Kanbas/Account/Profile/edit.html">
+              <button type="submit" class="btn btn-light">
+                  <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+                  Edit Profile
+              </button>
           </form>
-        </td>
-      </tr>
-    </table>
-
-    <strong>Contact</strong><br>
-    No service, you can add on the setting page.
-    <br>
-    <br>
-
-    <strong>Biography</strong><br>
-    I followed the white rabbit down the hole.
-    <br>
-    <br>
-
-    <strong>Links</strong><br>
-    <a href="#">Youtube</a>
-       
-</table>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
