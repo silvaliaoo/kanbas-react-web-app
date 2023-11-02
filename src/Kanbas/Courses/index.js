@@ -10,10 +10,10 @@ import Grades from "./Grades";
 import db from "../Database";
 import { BiGlassesAlt } from 'react-icons/bi'
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   const [, , , , screen] = pathname.split("/");
 
   return (
