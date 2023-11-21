@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -6,10 +6,42 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
+
+
 
 function ModuleList() {
   const { courseId } = useParams();
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+
+
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
@@ -17,12 +49,12 @@ function ModuleList() {
   return (
     <ul className="list-group">
       <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }} className="list-group-item">
-      <button onClick={() => dispatch(updateModule(module))} className="btn btn-primary">
+      <button onClick={handleUpdateModule} className="btn btn-primary">
         Update
         </button>
 
         <button
-          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+          onClick={handleAddModule}
           style={{ marginRight: '5px' }}
           className="btn btn-success"
         >
@@ -48,7 +80,7 @@ function ModuleList() {
            <li key={index} className="list-group-item">
             <div className="d-flex justify-content-end">
                 <button
-                  onClick={() => dispatch(deleteModule(module._id))}
+                  onClick={() => handleDeleteModule(module._id)}
                   className="btn btn-danger me-2"
                 >
                   Delete

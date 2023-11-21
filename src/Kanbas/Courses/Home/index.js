@@ -13,7 +13,6 @@ function Home() {
       <div className="col-8">
         <div>
           <div className="float-end">
-            <button className="btn btn-danger">+ Module</button>
             <button className="dropdown btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i className="fa fa-check-circle text-success me-2" aria-hidden="true"></i>
               Publish All
