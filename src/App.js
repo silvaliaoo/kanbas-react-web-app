@@ -1,10 +1,10 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 // import './App.css';
 import Labs from "./Labs";
 import Kanbas from "./Kanbas";
 import HelloWorld from "./Labs/a3/HelloWorld";
 import { HashRouter, Link, Navigate, Route, Routes } from "react-router-dom";
-import Project from "./project";
+import Project from "./project/index";
 
 
 function App() {
